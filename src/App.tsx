@@ -321,7 +321,7 @@ function App() {
     }
   };
 
-  const handleAssetChange = (index: number, value: number) => {
+  const _handleAssetChange = (index: number, value: number) => {
     const newAssets = [...assets];
     newAssets[index].amount = value;
     setAssets(newAssets);
