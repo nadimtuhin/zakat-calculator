@@ -26,4 +26,4 @@ playwright-report
 test-results
 
 .env
-.env.local
+.env.localbuild
