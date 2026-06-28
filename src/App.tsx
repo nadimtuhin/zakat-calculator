@@ -69,8 +69,8 @@ function App() {
   const [silverWeight, setSilverWeight] = useState(0);
   const [goldUnit, setGoldUnit] = useState<MetalUnit>("g");
   const [silverUnit, setSilverUnit] = useState<MetalUnit>("g");
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
+  const [loading, _setLoading] = useState(true);
+  const [error, _setError] = useState("");
 
   useEffect(() => {
     async function fetchMetalPrices() {
@@ -299,7 +299,7 @@ function App() {
     }
   };
 
-  const handleUnitChange = (metal: "gold" | "silver", unit: MetalUnit) => {
+  const _handleUnitChange = (metal: "gold" | "silver", unit: MetalUnit) => {
     const conversionFactor = 31.1035;
 
     if (metal === "gold") {
